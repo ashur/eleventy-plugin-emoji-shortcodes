@@ -24,5 +24,8 @@
     "chai": "^4.3.6",
     "eslint": "^8.12.0",
     "mocha": "^9.2.2"
+  },
+  "dependencies": {
+    "gemoji": "^7.1.0"
   }
 }
