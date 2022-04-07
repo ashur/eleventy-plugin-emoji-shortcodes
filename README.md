@@ -31,7 +31,9 @@ Next, include the following in your [Eleventy config file](https://www.11ty.dev/
 ```javascript
 const emojiShortcodes = require("@aaashur/eleventy-plugin-emoji-shortcodes");
 
-eleventyConfig.addPlugin(emojiShortcodes);
+module.exports = (eleventyConfig) => {
+	eleventyConfig.addPlugin(emojiShortcodes);
+};
 ```
 
 ## Plugin Options
