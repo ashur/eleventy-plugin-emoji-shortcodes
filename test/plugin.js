@@ -31,7 +31,16 @@ describe(".transform()", () =>
 		assert.equal( actual, expected );
 	});
 
-	it("should set class name if defined", async () =>
+	it("should not transform shortcodes without emoji match", async () =>
+	{
+		const string = "Congratulations! :undefined_shortcode:";
+		const expected = "Congratulations! :undefined_shortcode:";
+		const actual = await transform(string);
+
+		assert.equal( actual, expected );
+	});
+
+	it("should set class name if class option is defined", async () =>
 	{
 		const string = "Congratulations! :tada:";
 		const expected = "Congratulations! <span aria-label=\"tada\" role=\"img\" class=\"emoji\">🎉</span>";

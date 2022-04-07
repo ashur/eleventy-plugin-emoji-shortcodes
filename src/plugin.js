@@ -11,6 +11,11 @@ module.exports.transform = async (string, options = {}) =>
 
 	return string.replace( /:([a-z_]+):/g, (match, $1) =>
 	{
+		if( !gemoji.nameToEmoji[$1] )
+		{
+			return match;
+		}
+
 		const attrs = [
 			`aria-label="${$1}"`,
 			"role=\"img\"",
