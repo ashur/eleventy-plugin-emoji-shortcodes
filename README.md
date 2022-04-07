@@ -46,3 +46,11 @@ To set a class name (or names), set the `class` option when registering the plug
 ```javascript
 eleventyConfig.addPlugin(emojiShortcodes, { class: 'emoji' });
 ```
+
+```
+:popcorn:
+```
+
+```html
+<span aria-label="popcorn" role="img" class="emoji">🍿</span>
+```
