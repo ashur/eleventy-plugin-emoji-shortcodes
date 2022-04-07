@@ -35,7 +35,7 @@ describe(".transform()", () =>
 	{
 		const string = "Congratulations! :tada:";
 		const expected = "Congratulations! <span aria-label=\"tada\" role=\"img\" class=\"emoji\">🎉</span>";
-		const actual = await transform(string, "emoji");
+		const actual = await transform( string, {class: "emoji"} );
 
 		assert.equal( actual, expected );
 	});

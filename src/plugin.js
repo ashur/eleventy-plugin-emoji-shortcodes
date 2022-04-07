@@ -1,10 +1,11 @@
 /**
  * @async
  * @param {string} string
- * @param {string} [className] - optional class(es) to set on the resulting element
+ * @param {Object} [options]
+ * @param {string} [options.class] - optional class(es) to set on the resulting element
  * @return {Promise<string>}
  */
-module.exports.transform = async (string, className) =>
+module.exports.transform = async (string, options = {}) =>
 {
 	const gemoji = await import("gemoji");
 
@@ -15,9 +16,9 @@ module.exports.transform = async (string, className) =>
 			"role=\"img\"",
 		];
 
-		if( className )
+		if( options.class )
 		{
-			attrs.push( `class="${className}"` );
+			attrs.push( `class="${options.class}"` );
 		}
 
 		return `<span ${attrs.join(" ")}>${gemoji.nameToEmoji[$1]}</span>`
