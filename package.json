@@ -2,7 +2,7 @@
   "name": "@aaashur/eleventy-plugin-emoji-shortcodes",
   "version": "0.1.0",
   "description": "Transform emoji shortcodes to accessible elements",
-  "main": "index.js",
+  "main": ".eleventy.js",
   "scripts": {
     "test": "mocha ./test"
   },
