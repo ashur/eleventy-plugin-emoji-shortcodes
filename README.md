@@ -32,7 +32,7 @@ Next, include the following in your [Eleventy config file](https://www.11ty.dev/
 const emojiShortcodes = require("@aaashur/eleventy-plugin-emoji-shortcodes");
 
 module.exports = (eleventyConfig) => {
-	eleventyConfig.addPlugin(emojiShortcodes);
+    eleventyConfig.addPlugin(emojiShortcodes);
 };
 ```
 
