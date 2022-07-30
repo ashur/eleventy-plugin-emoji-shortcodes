@@ -5,6 +5,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+- Improve handling of files without output paths (i.e., `permalink: false`)
 
 ## [1.0.1] - 2022-04-07
 ### Fixed

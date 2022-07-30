@@ -8,7 +8,7 @@ module.exports = (eleventyConfig, pluginOptions = {}) =>
 {
 	eleventyConfig.addTransform( "emojiShortcodes", async function( content )
 	{
-		if( this.outputPath.endsWith( ".html" ) )
+		if( this.outputPath && this.outputPath.endsWith( ".html" ) )
 		{
 			return await transform( content, pluginOptions );
 		}
