@@ -27,5 +27,8 @@
   },
   "dependencies": {
     "gemoji": "^7.1.0"
-  }
+  },
+  "eslintIgnore": [
+    "!.*"
+  ]
 }

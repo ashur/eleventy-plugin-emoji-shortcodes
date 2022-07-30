@@ -8,11 +8,13 @@ module.exports = (eleventyConfig, pluginOptions = {}) =>
 {
 	eleventyConfig.addTransform( "emojiShortcodes", async function( content )
 	{
+		/* eslint-disable no-invalid-this */
 		if( this.outputPath && this.outputPath.endsWith( ".html" ) )
 		{
 			return await transform( content, pluginOptions );
 		}
 
 		return content;
+		/* eslint-enable no-invalid-this */
 	});
 };
